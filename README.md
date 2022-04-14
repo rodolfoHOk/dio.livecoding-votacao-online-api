@@ -1,4 +1,4 @@
-git push -u origin maingit push -u origin main Live Coding - Criando o sistema de VOTAÇÃO ONLINE do BBB - DIO
+# Live Coding - Criando o sistema de VOTAÇÃO ONLINE do BBB - DIO
 
 > Projeto do Back-End Api realizado durante a live coding Criando o sistema de VOTAÇÃO ONLINE do BBB da DIO
 > com Rodrigo Tavares (Avanade) e Renan Oliveira (DIO) com participação de Stephanie Cardoso (Globo)
