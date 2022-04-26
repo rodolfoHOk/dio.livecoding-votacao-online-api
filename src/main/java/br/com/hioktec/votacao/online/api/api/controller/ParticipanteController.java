@@ -1,9 +1,11 @@
 package br.com.hioktec.votacao.online.api.api.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +20,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/participantes")
+@CrossOrigin
 public class ParticipanteController {
 	
 	private final ParticipanteRepository repository;
@@ -36,6 +39,12 @@ public class ParticipanteController {
 		} else {
 			return ResponseEntity.ok(optParticipante.get());
 		}
+	}
+	
+	@GetMapping("/todos")
+	public ResponseEntity<List<ParticipanteModel>> todos() {
+		List<ParticipanteModel> participantes = repository.findAll();
+		return ResponseEntity.ok(participantes);
 	}
 
 }

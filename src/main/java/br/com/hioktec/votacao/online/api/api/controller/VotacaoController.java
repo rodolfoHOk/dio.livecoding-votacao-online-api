@@ -1,6 +1,7 @@
 package br.com.hioktec.votacao.online.api.api.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,14 +14,15 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/votacao")
+@CrossOrigin
 public class VotacaoController {
 	
 	private final VotacaoService service;
 	
 	@PostMapping
-	public ResponseEntity<String> votar(@RequestBody ParticipanteModel participante) {
+	public ResponseEntity<ParticipanteModel> votar(@RequestBody ParticipanteModel participante) {
 		service.adicionarEvento(participante);
-		return ResponseEntity.ok("voto computado");
+		return ResponseEntity.ok(participante);
 	}
 
 }
