@@ -1,15 +1,18 @@
 # Live Coding - Criando o sistema de VOTAÇÃO ONLINE do BBB - DIO
 
+# Java API com Mongo DB e Kafka (Producer)
+
 > Projeto do Back-End Api realizado durante a live coding Criando o sistema de VOTAÇÃO ONLINE do BBB da DIO
 > com Rodrigo Tavares (Avanade) e Renan Oliveira (DIO) com participação de Stephanie Cardoso (Globo)
 
 ## Tecnologias do back-end
 
-- Java
-- Spring
-- MongoDB
-- Kafka
-- Docker
+- Java : Linguagem de programação
+- Spring : Framework Java
+- MongoDB : Banco noSQL
+- Kafka : Mensageria
+- Docker : Container
+- OpenAPI : Documentação
 
 ## Docker-Compose
 
